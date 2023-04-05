@@ -1,7 +1,39 @@
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
-vim.keymap.set('n', '<C-p>', builtin.git_files, {})
-vim.keymap.set('n', '<leader>ps', function()
-	builtin.grep_string({ search = vim.fn.input("Grep > ") })
-end)
-vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
+-- import telescope plugin safely
+local telescope_setup, telescope = pcall(require, "telescope")
+if not telescope_setup then
+	return
+end
+--
+-- import telescope actions safely
+local actions_setup, actions = pcall(require, "telescope.actions")
+if not actions_setup then
+	return
+end
+--
+-- import telescope-ui-select safely
+local themes_setup, themes = pcall(require, "telescope.themes")
+if not themes_setup then
+	return
+end
+--
+-- configure telescope
+telescope.setup({
+	-- configure custom mappings
+	defaults = {
+		mappings = {
+			i = {
+				["<Up>"] = actions.move_selection_previous, -- move to prev result
+				["<Down>"] = actions.move_selection_next, -- move to next result
+				["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist, -- send selected to quickfixlist
+			},
+		},
+		extensions = {
+			["ui-select"] = {
+				themes.get_dropdown({}),
+			},
+		},
+	},
+})
+--
+telescope.load_extension("fzf")
+telescope.load_extension("ui-select")
