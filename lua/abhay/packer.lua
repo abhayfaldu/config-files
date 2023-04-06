@@ -35,6 +35,9 @@ return packer.startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
+	-- packeges by me
+	use("navarasu/onedark.nvim")
+
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
 	-- fuzzy finder w/ telescope
@@ -58,7 +61,7 @@ return packer.startup(function(use)
 	-- packages by josean martinez
 	--
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
