@@ -1,17 +1,17 @@
 -- Automatically generated packer.nvim plugin loader code
---
+
 if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
   vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
   return
 end
---
+
 vim.api.nvim_command('packadd packer.nvim')
---
+
 local no_errors, error_msg = pcall(function()
---
+
 _G._packer = _G._packer or {}
 _G._packer.inside_compile = true
---
+
 local time
 local profile_info
 local should_profile = false
@@ -28,7 +28,7 @@ if should_profile then
 else
   time = function(chunk, start) end
 end
---
+
 local function save_profiles(threshold)
   local sorted_times = {}
   for chunk_name, time_taken in pairs(profile_info) do
@@ -44,21 +44,21 @@ local function save_profiles(threshold)
   if threshold then
     table.insert(results, '(Only showing plugins that took longer than ' .. threshold .. ' ms ' .. 'to load)')
   end
---
+
   _G._packer.profile_output = results
 end
---
+
 time([[Luarocks path setup]], true)
 local package_path_str = "/Users/abhayfaldu/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/abhayfaldu/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/abhayfaldu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/abhayfaldu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
 local install_cpath_pattern = "/Users/abhayfaldu/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
---
+
 if not string.find(package.cpath, install_cpath_pattern, 1, true) then
   package.cpath = package.cpath .. ';' .. install_cpath_pattern
 end
---
+
 time([[Luarocks path setup]], false)
 time([[try_loadstring definition]], true)
 local function try_loadstring(s, component, name)
@@ -70,7 +70,7 @@ local function try_loadstring(s, component, name)
   end
   return result
 end
---
+
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
@@ -212,6 +212,11 @@ _G.packer_plugins = {
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
+  ["onedark.nvim"] = {
+    loaded = true,
+    path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/onedark.nvim",
+    url = "https://github.com/navarasu/onedark.nvim"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -272,11 +277,6 @@ _G.packer_plugins = {
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -293,7 +293,7 @@ _G.packer_plugins = {
     url = "https://github.com/folke/zen-mode.nvim"
   }
 }
---
+
 time([[Defining packer_plugins]], false)
 -- Config for: inc-rename.nvim
 time([[Config for inc-rename.nvim]], true)
@@ -304,17 +304,17 @@ time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]
 vim.cmd [[ packadd nvim-ts-autotag ]]
 time([[Sequenced loading]], false)
---
+
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
   vim.cmd("doautocmd BufRead")
 end
 _G._packer.needs_bufread = false
---
+
 if should_profile then save_profiles() end
---
+
 end)
---
+
 if not no_errors then
   error_msg = error_msg:gsub('"', '\\"')
   vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')

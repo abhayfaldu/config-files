@@ -3,7 +3,7 @@ local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status then
 	return
 end
---
+
 -- configure treesitter
 treesitter.setup({
 	-- enable syntax highlighting
@@ -28,6 +28,15 @@ treesitter.setup({
 		"lua",
 		"vim",
 		"gitignore",
+	},
+	incremental_selection = {
+		enable = true,
+		keymaps = {
+			init_selection = "<c-space>",
+			node_incremental = "<c-space>",
+			scope_incremental = "<c-s>",
+			node_decremental = "<S-space>",
+		},
 	},
 	-- auto install above language parsers
 	auto_install = true,
