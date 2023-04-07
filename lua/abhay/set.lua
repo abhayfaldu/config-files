@@ -41,7 +41,6 @@ opt.colorcolumn = "100"
 -- cursor line
 opt.cursorline = true -- highlight the current cursor line
 opt.signcolumn = "yes"
-vim.g.nightflyTransparent = true
 
 opt.backspace = "indent,eol,start"
 
