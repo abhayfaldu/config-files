@@ -287,6 +287,11 @@ _G.packer_plugins = {
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
+  ["vim-nightfly-guicolors"] = {
+    loaded = true,
+    path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
+    url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/vim-surround",
