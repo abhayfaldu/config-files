@@ -9,17 +9,17 @@ keymap.set("v", "J", ":m '>+1<CR>gv=gv") -- to move selected code 1 line down wi
 keymap.set("v", "K", ":m '<-2<CR>gv=gv") -- to move selected code 1 line up with proper indentation
 
 keymap.set("n", "J", "mzJ`z") -- I don't know
-keymap.set("n", "<C-d>", "<C-d>zz") -- I don't know
-keymap.set("n", "<C-u>", "<C-u>zz") -- I don't know
+keymap.set("n", "<C-d>", "<C-d>zz") -- down half page with cursor in center
+keymap.set("n", "<C-u>", "<C-u>zz") -- up half page with cursor in center
 keymap.set("n", "n", "nzzzv") -- I don't know
 keymap.set("n", "N", "Nzzzv") -- I don't know
 
-keymap.set("n", "<leader>vwm", function() -- I don't know
-	require("vim-with-me").StartVimWithMe()
-end)
-keymap.set("n", "<leader>svwm", function() -- I don't know
-	require("vim-with-me").StopVimWithMe()
-end)
+--[[ keymap.set("n", "<leader>vwm", unction() -- I don't know ]]
+--[[ 	require("vim-with-me").StartVimWithMe() ]]
+--[[ end) ]]
+--[[ keymap.set("n", "<leader>svwm", function() -- I don't know ]]
+--[[ 	require("vim-with-me").StopVimWithMe() ]]
+--[[ end) ]]
 
 -- greatest remap ever
 keymap.set("x", "<leader>p", [["_dP]]) -- I don't know
@@ -55,7 +55,7 @@ end)
 -- keymaps by the josean martinez
 keymap.set("n", "<leader>nh", ":nohl<CR>") -- for removing selection of search
 
-keymap.set("n", "x", '"_x') -- to deleate but without copy
+keymap.set("n", "x", '"_x') -- to delete but without copy
 
 keymap.set("n", "<leader>+", "<C-a>") -- incriment present number in line
 keymap.set("n", "<leader>-", "<C-x>") -- decrement present nubmer in line
