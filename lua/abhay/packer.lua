@@ -1,5 +1,4 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
--- adding to check upstream branch
 
 -- auto install packer if not installed
 local ensure_packer = function()
