@@ -38,7 +38,7 @@ return packer.startup(function(use)
 	-- packeges by me
 	use("navarasu/onedark.nvim") -- theme for my eyes
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- for better comments
-	use("akinsho/toggleterm.nvim") -- terminal in nvim
+	--[[ use("akinsho/toggleterm.nvim") -- terminal in nvim ]]
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
