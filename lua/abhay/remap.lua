@@ -57,8 +57,8 @@ keymap.set("n", "<leader>nh", ":nohl<CR>") -- for removing selection of search
 
 keymap.set("n", "x", '"_x') -- to delete but without copy
 
-keymap.set("n", "<leader>+", "<C-a>") -- incriment present number in line
-keymap.set("n", "<leader>-", "<C-x>") -- decrement present nubmer in line
+--[[ keymap.set("n", "<leader>+", "<C-a>") -- incriment present number in line ]]
+--[[ keymap.set("n", "<leader>-", "<C-x>") -- decrement present nubmer in line ]]
 
 keymap.set("n", "<leader>sv", "<C-w>v") -- split window vertically
 keymap.set("n", "<leader>sh", "<C-w>s") -- split window horizontally
