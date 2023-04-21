@@ -31,7 +31,7 @@ end
 -- vim.cmd.packadd('packer.nvim')
 
 --return require('packer').startup(function(use)
-return packer.startup(function(use)
+return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
@@ -39,6 +39,7 @@ return packer.startup(function(use)
 	use("navarasu/onedark.nvim") -- theme for my eyes
 	use("JoosepAlviste/nvim-ts-context-commentstring") -- for better comments
 	--[[ use("akinsho/toggleterm.nvim") -- terminal in nvim ]]
+	use({ "codota/tabnine-nvim", run = "./dl_binaries.sh" })
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 

@@ -242,6 +242,11 @@ _G.packer_plugins = {
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/refactoring.nvim",
     url = "https://github.com/theprimeagen/refactoring.nvim"
   },
+  ["tabnine-nvim"] = {
+    loaded = true,
+    path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/tabnine-nvim",
+    url = "https://github.com/codota/tabnine-nvim"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/abhayfaldu/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
