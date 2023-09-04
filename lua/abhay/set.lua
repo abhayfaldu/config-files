@@ -1,54 +1,43 @@
-local opt = vim.opt -- for consiseness
+vim.opt.guicursor = ""
 
-opt.guicursor = ""
+vim.opt.nu = true
+vim.opt.rnu = true
 
--- line numbers
-opt.number = true -- show relative line numbers
-opt.relativenumber = true -- shows absolute line number on cursor line (when relative number is on)
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.opt.autoindent = true
 
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.softtabstop = 2 -- 2 spaces for indent width
-opt.shiftwidth = 2 -- expand tab to spaces
-opt.expandtab = true -- copy indent from current line when starting new one
+vim.opt.smartindent = true
 
-opt.autoindent = true
-opt.smartindent = true
+vim.opt.wrap = false
 
--- line wrapping
-opt.wrap = false -- disable line wrapping
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
 
-opt.swapfile = false
-opt.backup = false
-opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-opt.undofile = true
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.ignorecase = true
 
--- search settings
-opt.hlsearch = false
-opt.incsearch = true
-opt.ignorecase = true -- ignore case when searching
-opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sen
+vim.opt.termguicolors = true
 
-opt.termguicolors = true
+vim.opt.scrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
 
-opt.scrolloff = 8
-opt.signcolumn = "yes"
-opt.isfname:append("@-@")
+vim.opt.updatetime = 50
 
-opt.updatetime = 50
+vim.opt.backspace = "indent,eol,start"
 
-opt.colorcolumn = "100"
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
--- cursor line
-opt.cursorline = true -- highlight the current cursor line
-opt.signcolumn = "yes"
+-- vim.opt.colorcolumn = "80"
 
-opt.backspace = "indent,eol,start"
+vim.g.mapleader = " "
 
--- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+vim.cmd[[autocmd VimEnter * highlight clear SignColumn | hi LineNr guibg=NONE ctermbg=NONE]]
 
--- split windows
-opt.splitright = true -- split vertical window to the right
-opt.splitbelow = true -- split horizontal window to the bottom
-
--- opt.iskeyword:append("-") -- consider string-string as whole word
