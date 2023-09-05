@@ -1,5 +1,6 @@
 function ColorMyPencils(color)
-	color = color or "onedark"
+	--[[ color = color or "onedark" ]]
+	color = color or "nightfly"
 	if color == "onedark" then
 		require("onedark").setup({
 			style = "cool",
@@ -8,6 +9,9 @@ function ColorMyPencils(color)
 	else
 		vim.cmd.colorscheme(color)
 	end
+
+	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 end
 
 ColorMyPencils()

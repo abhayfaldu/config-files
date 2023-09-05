@@ -36,10 +36,8 @@ opt.isfname:append("@-@")
 
 opt.updatetime = 50
 
-opt.colorcolumn = "100"
-
 -- cursor line
-opt.cursorline = true -- highlight the current cursor line
+opt.cursorline = false -- highlight the current cursor line
 opt.signcolumn = "yes"
 
 opt.backspace = "indent,eol,start"
