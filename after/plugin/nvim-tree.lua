@@ -38,6 +38,15 @@ nvimtree.setup({
 	-- 	git = {
 	-- 		ignore = false,
 	-- 	},
+	filters = {
+		dotfiles = false,
+		custom = { "^.git$" },
+	},
+	git = {
+		enable = true,
+		ignore = false,
+		timeout = 500,
+	},
 })
 
 -- NvimTreeNormal = { fg = c.fg_sidebar, bg = c.bg_sidebar },
